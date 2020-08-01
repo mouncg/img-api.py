@@ -2,7 +2,7 @@ import setuptools
 
 description = "API wrapper for img-api"
 #long_description = open("README.md").read()
-version = "1.0.0"
+version = "1.0.1"
 
 packages = ["imgapi"]
 
