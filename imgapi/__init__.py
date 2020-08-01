@@ -31,7 +31,7 @@ class Client:
         if self.password:
             headers = { "Authorization": self.password }
 
-        response = await self.session.get(f"http://{self.host}:{self.port}{endpoint}", params=params, headers=headers)
+        response = await self.session.get(url=f"http://{self.host}:{self.port}{endpoint}", params=params, headers=headers)
 
         if response.status != 200:
             if "application/json" in response.headers.get("content-type", ""):
