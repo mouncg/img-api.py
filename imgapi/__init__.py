@@ -5,7 +5,7 @@ import asyncio
 __VERSION__ = "1.0.0"
 
 class Client:
-    def __init__(self, session=None, loop=None port=3030, host="localhost", password=None):
+    def __init__(self, session=None, loop=None, port=3030, host="localhost", password=None):
         """
         Params:
             session: (aiohttp.Session) Session to perform requests with.
@@ -20,7 +20,7 @@ class Client:
         """
         self.is_async = is_async
         self.host = host
-        self.session = session if session or aiohttp.Session(loop=loop or asyncio.get_event_loop())
+        self.session = session if session else aiohttp.Session(loop=loop or asyncio.get_event_loop())
         self.port = port
         self.password = password
 
