@@ -2,7 +2,7 @@ import json
 import aiohttp
 import asyncio
 
-__VERSION__ = "1.0.3"
+__VERSION__ = "1.0.4"
 
 class Client:
     def __init__(self, session=None, loop=None, port=3030, host="localhost", password=None, is_async=True):
@@ -20,7 +20,7 @@ class Client:
         """
         self.is_async = is_async
         self.host = host
-        self.session = session if session else aiohttp.Session(loop=loop or asyncio.get_event_loop())
+        self.session = session
         self.port = port
         self.password = password
 
