@@ -2,7 +2,7 @@ import json
 import aiohttp
 import asyncio
 
-__VERSION__ = "1.0.0"
+__VERSION__ = "1.0.1"
 
 class Client:
     def __init__(self, session=None, loop=None, port=3030, host="localhost", password=None):
